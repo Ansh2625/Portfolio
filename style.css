@@ -135,7 +135,7 @@ a
     font-weight: 500;
 }
 
-#hero-btn
+#hero-btn,.btn
 {
     background-color: #e84949;
     width: fit-content;
@@ -148,6 +148,13 @@ a
     font-weight: 500;
     border: solid 3px transparent;
     border-radius: 5px;
+}
+
+.btn:hover
+{
+    border: solid 3px #e84949;
+    color: black;
+    background-color: white;
 }
 
 #hero-btn:hover
@@ -178,7 +185,6 @@ a
 .my-image img
 {
     z-index: -1;
-    /* width: 250px; */
 }
 
 @keyframes scaleImage
@@ -286,3 +292,7 @@ a
     }
 }
 
+.project-skill
+{
+    width: 40px;
+}
