@@ -92,6 +92,7 @@ a
 
 .faded-text
 {
+    position: absolute;
     user-select: none;
     font-size: 7em;
     color: rgb(231, 231, 231);
@@ -295,4 +296,27 @@ a
 .project-skill
 {
     width: 40px;
+}
+
+.project
+{
+    background-color: rgb(231, 231, 231);
+    margin-top: 4rem;
+}
+
+.project-section-head
+{
+    color: #e84949;
+    font-size: 90px;
+    text-align: center;
+    padding: 30px;
+}
+
+.project-container
+{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 3rem 0;
+    display: flex;
+    flex-direction: column;
 }
