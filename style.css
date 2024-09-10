@@ -186,6 +186,7 @@ a
 .my-image img
 {
     z-index: -1;
+    width: 260px;
 }
 
 @keyframes scaleImage
@@ -293,11 +294,6 @@ a
     }
 }
 
-.project-skill
-{
-    width: 40px;
-}
-
 .project
 {
     background-color: rgb(231, 231, 231);
@@ -319,4 +315,152 @@ a
     padding: 3rem 0;
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 120px;
+}
+
+#p1
+{
+    background-image: url(Images/p1.png);
+}
+
+#p2
+{
+    margin-left: 120px;
+    background-image: url(Images/p2.png);
+}
+
+#p3
+{
+    background-image: url(Images/p3.png);
+}
+
+#p4
+{
+    margin-left: 120px;
+    background-image: url(Images/p4.png);
+}
+
+.project-card
+{
+    width: 90%;
+    height: 550px;
+    background-size: cover;
+    position: relative;
+    box-shadow: 0px 0px 40px #1f1f1f;
+}
+
+.project-card::after
+{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1f1f1f9a;
+    transform: scaleX(1);
+    z-index: 0;
+}
+
+.project-card::before
+{
+    content: "";
+    position: absolute;
+    top:0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(45deg, #343d68, #343d68be, #343d687c);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: all 0.4s;
+    z-index: 1;
+}
+
+.project-card:hover::before
+{
+    transform: scaleX(1);
+}
+
+.project-number
+{
+    position: absolute;
+    font-size: 120px;
+    font-weight: 600;
+    color: white;
+    z-index: 2;
+    left: 2%;
+    display: none;
+}
+
+.project-card:hover .project-number
+{
+    display: block;
+}
+
+.project-content
+{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    color: white;
+    padding: 2em;
+    bottom: 15%;
+    z-index: 3;
+    gap: 1em;
+    left: 5%;
+    transition: all 0.4s;
+}
+
+.project-skill
+{
+    width: 40px;
+}
+
+.project-skills
+{
+    width: 60%;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.project-head
+{
+    font-size: 50px;
+    font-weight: bold;
+    line-height: 3rem;
+}
+
+.project-sub-head
+{
+    width: 70%;
+    font-size: 16px;
+    font-style: italic;
+}
+
+.links-grp
+{
+    display: flex;
+    gap: 0.9rem;
+    align-items: center;
+}
+
+.icon
+{
+    cursor: pointer;
+    color: white;
+    font-size: 35px;
+    transition: all 0.4s;
+}
+
+.icon:hover
+{
+    color: #e84949;
+}
+
+.project-card:hover .project-content
+{
+    transform: scale(1.05);
 }
